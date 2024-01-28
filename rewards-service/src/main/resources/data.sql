@@ -1,0 +1,15 @@
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1001,'amazon',70000,5001,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1002,'flipkart',4000,5003,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1003,'flipkart',12000,5002,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1004,'meesho',300,5002,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1005,'firstcry',1500,5001,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1006,'amazon',1000,5004,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1007,'myntra',2000,5001,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1008,'meesho',1350,5003,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1009,'flipkart',4000,5005,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1010,'amazon',20000,5001,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1011,'amazon',1500,5003,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1012,'flipkart',2300,5003,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1013,'firstcry',1700,5002,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1014,'myntra',520,5001,'');
+INSERT INTO transaction (id, merchant_name, amount, party_id, environment) VALUES (1015,'myntra',35000,5004,'');

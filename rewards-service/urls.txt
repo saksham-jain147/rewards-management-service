@@ -1,0 +1,6 @@
+Rewards Service
+http://localhost:8000/rewards-service/party_id/5001
+
+
+h2 console
+http://localhost:8000/h2-console
