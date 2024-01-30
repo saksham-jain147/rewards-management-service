@@ -1,0 +1,5 @@
+Rewards Calculator Service
+http://localhost:8200/rewards-calculator-service/merchant_name/amazon/amount/15000
+
+h2 console
+http://localhost:8000/h2-console
