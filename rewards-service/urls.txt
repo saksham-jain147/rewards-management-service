@@ -1,5 +1,6 @@
 Rewards Service
-http://localhost:8000/rewards-service/party_id/5001
+http://localhost:8000/rewards-service/fetch-transactions/party_id/5001
+http://localhost:8000/rewards-service/save-rewards/party_id/5001/reward_points/50
 
 
 h2 console

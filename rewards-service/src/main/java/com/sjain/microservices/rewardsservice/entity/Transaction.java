@@ -1,4 +1,4 @@
-package com.sjain.microservices.rewardsservice;
+package com.sjain.microservices.rewardsservice.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
