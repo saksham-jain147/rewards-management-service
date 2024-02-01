@@ -13,10 +13,15 @@ public class RewardsCalculatorServiceController {
     @Autowired
     private RewardsCalculatorServiceRepository repository;
     @GetMapping("/rewards-calculator-service/merchant_name/{merchantName}/amount/{amount}")
-    public int calculateRewards(
+    public Long calculateRewards(
             @PathVariable String merchantName,
             @PathVariable BigDecimal amount
             ){
-        return (repository.findByMerchantName(merchantName).getMultiplier().multiply(amount)).intValue();
+        Config config = repository.findByMerchantName(merchantName);
+        if(config != null) {
+            return (config.getMultiplier().multiply(amount)).longValue();
+        } else { // Case when there are no reward multiplier configured for merchant
+            return 0L;
+        }
     }
 }
