@@ -16,7 +16,7 @@ public class RewardsManagementServiceController {
     @Autowired
     private RewardsManagementService rewardsManagementService;
     @GetMapping("/rewards-management-service/party_id/{partyId}")
-    public ResponseEntity<String> processRewards(@PathVariable Long partyId){
+    public ResponseEntity<String> calculateRewards(@PathVariable Long partyId){
 
         List<Transaction> transactions = rewardsManagementService.fetchTransactions(partyId);
         try {
@@ -29,8 +29,30 @@ public class RewardsManagementServiceController {
                     throw new RuntimeException("Rewards-Calculator-Service refused to connect");
                 }
             }
-            System.out.println(partyId + "-->" + totalRewards);
+            System.out.println(partyId + "--RestTemplate-->" + totalRewards);
             return rewardsManagementService.saveRewards(partyId, totalRewards);
+        } catch(Exception e){
+            String errorMessage = "Failure: " + e.getMessage();
+            return ResponseEntity.status(500).body(errorMessage); // Internal Server Error
+        }
+    }
+
+    @GetMapping("/rewards-management-service-feign/party_id/{partyId}")
+    public ResponseEntity<String> calculateRewardsFeign(@PathVariable Long partyId){
+
+        try {
+            List<Transaction> transactions = rewardsManagementService.fetchTransactionsFeign(partyId);
+            Long totalRewards = 0L;
+            for (Transaction transaction : transactions) {
+                Long pointsForEachTransaction = rewardsManagementService.getPointsForEachTransactionFeign(transaction.getMerchantName(), transaction.getAmount());
+                if (pointsForEachTransaction != -1L) {
+                    totalRewards += pointsForEachTransaction;
+                } else {
+                    throw new RuntimeException("Rewards-Calculator-Service refused to connect");
+                }
+            }
+            System.out.println(partyId + "--Feign-->" + totalRewards);
+            return rewardsManagementService.saveRewardsFeign(partyId, totalRewards);
         } catch(Exception e){
             String errorMessage = "Failure: " + e.getMessage();
             return ResponseEntity.status(500).body(errorMessage); // Internal Server Error
