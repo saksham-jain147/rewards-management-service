@@ -1,7 +1,7 @@
 package com.sjain.microservices.rewardsmanagementservice.service;
 
-import com.sjain.microservices.rewardsmanagementservice.RewardsCalculatorServiceProxy;
-import com.sjain.microservices.rewardsmanagementservice.RewardsServiceProxy;
+import com.sjain.microservices.rewardsmanagementservice.proxy.RewardsCalculatorServiceProxy;
+import com.sjain.microservices.rewardsmanagementservice.proxy.RewardsServiceProxy;
 import com.sjain.microservices.rewardsmanagementservice.dto.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;

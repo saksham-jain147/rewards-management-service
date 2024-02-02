@@ -1,4 +1,4 @@
-package com.sjain.microservices.rewardsmanagementservice;
+package com.sjain.microservices.rewardsmanagementservice.proxy;
 
 import com.sjain.microservices.rewardsmanagementservice.dto.Transaction;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name="rewards-service", url="localhost:8000")
+//@FeignClient(name="rewards-service", url="localhost:8000")
+@FeignClient(name="rewards-service") // If we don't specify url, Feign client will automatically pick-up available instances from eureka
 public interface RewardsServiceProxy {
     @GetMapping("/rewards-service/fetch-transactions/party_id/{partyId}")
     public List<Transaction> fetchTransactions(@PathVariable Long partyId);
