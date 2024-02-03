@@ -1,2 +1,3 @@
 Rewards Management Service
 http://localhost:8100/rewards-management-service/party_id/5001
+http://localhost:8100/rewards-management-service-feign/party_id/5001

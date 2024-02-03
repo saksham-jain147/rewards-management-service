@@ -1,0 +1,19 @@
+API GATEWAY
+http://localhost:8765/REWARDS-CALCULATOR-SERVICE/rewards-calculator-service/merchant_name/amazon/amount/15000
+http://localhost:8765/REWARDS-SERVICE/rewards-service/fetch-transactions/party_id/5001
+http://localhost:8765/REWARDS-SERVICE/rewards-service/save-rewards/party_id/5001/reward_points/50
+http://localhost:8765/REWARDS-MANAGEMENT-SERVICE/rewards-management-service/party_id/5001
+http://localhost:8765/REWARDS-MANAGEMENT-SERVICE/rewards-management-service-feign/party_id/5001
+
+http://localhost:8765/rewards-calculator-service/rewards-calculator-service/merchant_name/amazon/amount/15000
+http://localhost:8765/rewards-service/rewards-service/fetch-transactions/party_id/5001
+http://localhost:8765/rewards-service/rewards-service/save-rewards/party_id/5001/reward_points/50
+http://localhost:8765/rewards-management-service/rewards-management-service/party_id/5001
+http://localhost:8765/rewards-management-service/rewards-management-service-feign/party_id/5001
+
+http://localhost:8765/rewards-calculator-service/merchant_name/amazon/amount/15000
+http://localhost:8765/rewards-service/fetch-transactions/party_id/5001
+http://localhost:8765/rewards-service/save-rewards/party_id/5001/reward_points/50
+http://localhost:8765/rewards-management-service/party_id/5001
+http://localhost:8765/rewards-management-service-feign/party_id/5001
+http://localhost:8765/rewards-management-service-new/party_id/5001
